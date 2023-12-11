@@ -6,311 +6,301 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="#home"><i class="fa-solid fa-house" style="color: #e1a66f"></i> Home</a></li>
-                <li><a href="#about"><i class="fa-solid fa-face-meh-blank" style="color: #e1a66f"></i> who am i?</a></li>
-                <li><a href="#experiance"><i class="fa-solid fa-briefcase" style="color: #e1a66f"></i>Experiance</a></li>
-                <li><a href="#services"> <i class="fa-solid fa-hand-holding" style="color: #e1a66f"></i>Services</a></li>
-                <li><a href="#contact"><i class="fa-solid fa-envelope" style="color: #e1a66f"></i>Contact</a></li>
-                <li class="dropdownicon"><a href="">&#9776;</a></li>
-            </ul>
-        </nav>
-    
+        <div class="container">
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--profile-pic"><img src="images/profilepicture.JPG" alt="profile picture"></li>
+                    <li class="nav__item"><a href="#home" class="nav__link"><i class="fa-solid fa-house" style="color: #e1a66f"></i> Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link"><i class="fa-solid fa-face-meh-blank" style="color: #e1a66f"></i> who am i?</a></li>
+                    <li class="nav__item"><a href="#experiance" class="nav__link"><i class="fa-solid fa-briefcase" style="color: #e1a66f"></i>Experiance</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link"> <i class="fa-solid fa-hand-holding" style="color: #e1a66f"></i>Services</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link"><i class="fa-solid fa-envelope" style="color: #e1a66f"></i>Contact</a></li>
+                    <li class="nav__item nav__item--dropdown"><a href="#" class="nav__link">&#9776;</a></li>
+                </ul>
+            </nav>
 
-        <!-- ##########################    home     ########################### -->
-
+            <main class="main">
+                <article class="home" id="home">
+                    <button class="home__button home__button--work-with-me-desktop">work <br> with me</button>
+                    <div class="home__profile-picture">
+                        <img src="images/profilepicture.JPG" alt="profile picture">
+                    </div>
         
-        <article id="home">
-            <div class="profilepicture">
-                <img src="images/profilepicture.JPG" alt="profile picture">
-            </div>
-
-            <div>
-                <h3>Welcome to my portfolio website!</h3>
-                <p>I'm Meaza, a third-year web developer from Addis Ababa, Ethiopia. Explore my projects and witness my passion for coding as I continue to grow in this exciting field. Let's embark on this digital adventure together!</p>
-            </div>
-
-            <div class="buttons">
-                
-                <button id="more"><i class="fa-solid fa-circle-arrow-down fa-lg"></i></button>
-                <button id="workwithme">work <br> with me</button>
-            </div>
-            
-
-        </article>
-
-
-        <!-- ##########################    about     ########################### -->
-
-
-
-        <article id="about">
-            <video controls autoplay>
-                <source src="images/video.mp4" type="video/mp4" >
-                your browser does not support the video tag
-            </video>
-
-            <br>
-
-            <h3><q>
-                Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.
-            </q></h3>
-
-            <br>
-
-            <p> In a world where passion and dedication pave the path to success, I, Meaza Tadele, am a software student at Addis Ababa University, driven by my unwavering love for the field. From the moment I embarked on this journey, I knew that software development was my true calling. Each line of code I write, each problem I solve, brings me immense joy and fulfillment. It is this happiness that fuels my determination to excel and make a lasting impact in the world of technology.</p>
-
-            <br>
-
-            <p>As a software student, I embrace the ever-evolving nature of the industry. I thrive in the face of challenges, constantly seeking opportunities to expand my knowledge and skills. With a strong foundation in programming languages such as Java and Python, I am always eager to explore new frameworks and technologies that push the boundaries of what is possible. From designing sleek user interfaces to developing robust backend systems, I find solace in the art of crafting elegant and efficient software solutions.</p>
-
-            <br>
-            <br>
-
-            <p>Here are some key aspects of my journey:</p>
-            <ul>
-                <li>Constantly seeking opportunities to expand knowledge and skills</li>
-                <li> Strong foundation in programming languages like Java and Python</li>
-                <li>Eager to explore new frameworks and technologies</li>
-                <li> Passionate about designing sleek user interfaces and developing robust backend systems</li>
-            </ul>
-
-            <br>
-
-            <p> Outside the realm of coding, I am an avid learner and a curious soul. I believe that true growth comes from embracing diverse experiences and perspectives. Whether it's delving into the realms of artificial intelligence or diving into the depths of data analysis, I am constantly seeking ways to broaden my horizons and stay ahead of the technological curve. I am a firm believer in collaboration and teamwork, recognizing the power of collective intelligence to drive innovation and create groundbreaking solutions.</p>
-            <div id="audio">
-                <audio src="audios/willow-TaylorSwift.mp3" controls>
-                    Your browser does not support the audio element.
-                </audio>
-    
-                <button>work <br> with me</button>
-            </div>
-            
-            
-
-        </article>
-
-        <!-- ##########################    experiance page    ########################### -->
-
-
-
-        <article id="experiance">
-            
-            <h2>My best works</h2>
-            <div class="bestwork">
-                
-                <a href="https://girlboss.com/">
-                    <img src="images/work1.jpg" alt="my work" >
-                </a>
-                <a href="https://www.fatchoynyc.com/">
-                    <img src="images/work2.jpg" alt="my work" >
-                </a>
-                <a href="https://grette.no/en/">
-                    <img src="images/work3.jpg" alt="my work" >
-                </a>
-
-            </div>
-
-            <section id="timeline">
-                <h2>Time line</h2>
-                <div class="experiences">
-                    <div class="date_circle"><h3>2019</h3></div>
-                    <div class="container">
-                        <div><time datetime="2023-11-25"><b>OCT, 2019 - Dec, 2020</b></time></div>
-                        <div class="discription">
-                            <h4>Apple</h4>
-                            <p>I have been the iOS developer at Apple, working on the development of the latest iPhone features. <br>I have been the industrial designer at Apple, responsible for designing sleek and innovative product designs</p>
-                        </div>
+                    <div class="home__entry">
+                        <h3 class="home__title">Welcome to my website!</h3>
+                        <p class="home__text">I'm Meaza, a third-year web developer from Addis Ababa, Ethiopia. Explore my projects and witness my passion for coding as I continue to grow in this exciting field. Let's embark on this digital adventure together!</p>
                     </div>
-                </div>
-                
-
-                <div class="experiences">
-                    <div class="date_circle"><h3>2020</h3></div>
-                    <div class="container">
-                        <div><time datetime="2023-11-25"><b>OCT, 2019 - Dec, 2020</b></time></div>
-                        <div class="discription">
-                            <h4>Microsoft</h4>
-                            <p>I have been the software engineer at Microsoft, working on the development of Windows operating systems.I have been the data scientist at Microsoft, analyzing large datasets to improve machine learning algorithms.</p>
-                        </div>
+        
+                    <div class="home__buttons">
+                        
+                        <button class="home__button home__button--more"><i class="fa-solid fa-circle-arrow-down fa-lg"></i></button>
+                        <button class="home__button home__button--work-with-me">work <br> with me</button>
                     </div>
-                </div>
-
-                
-                <div class="experiences">
-                    <div class="date_circle"><h3>2021</h3></div>
-                    <div class="container">
-                        <div><time datetime="2023-11-25"><b> Aug, 2020 - March, 2021</b></time></div>
-                        <div class="discription">
-                            <p> <h4>Apple</h4> I have been the iOS developer at Apple, working on the development of the latest iPhone features. <br>I have been the industrial designer at Apple, responsible for designing sleek and innovative product designs</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="experiences">
-                    <div class="date_circle"><h3>2022</h3></div>
-                    <div class="container">
-                        <div><time datetime="2023-11-25"><b>Aug, 2022 - March, 2023</b></time></div>
-                        <div class="discription">
-                            <h4>Amazon</h4>
-                            <p>I have been the front-end developer at Amazon, working on the user interface of the e-commerce platform.
-                                I have been the supply chain manager at Amazon, optimizing the logistics and inventory management processes.</p>
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="experiences">
-                    <div class="date_circle"><h3>2023</h3></div>
-                    <div class="container">
-                        <div><time datetime="2023-11-25"><b>Aug, 2022 - March, 2023</b></time></div>
-                        <div class="discription">
-                            <h4>Meta</h4>
-                            <p>I have been the product manager at Facebook, overseeing the development and launch of new features on the platform.
-                                I have been the data privacy specialist at Facebook, ensuring compliance with regulations and protecting user data.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-            </section>
-
-        </article>
-
-
-        <!-- ##########################    services page     ########################### -->
-
-
-        <article id="services">
-            <h2>These are the Services i provide</h2>
-
-            <section>
-                <div class="service_image">
-                    <img src="images/software.jpg" alt="website design">
-                    <h5>website design</h5>
-                    <p> Website design involves creating visually appealing and user-friendly layouts for websites. It includes designing the overall look and feel of the website, including color schemes,
-                    typography, and graphical elements. Website designers often use tools like wireframes, mockups, and prototypes to showcase the proposed design to clients before moving into development.</p>
-                </div>
-                
-            </section>
+                    <button class="home__button  home__button--more-desktop">&#x2193;Readmore</button>
+                </article>
+        
+        
+                <!-- ##########################    about     ########################### -->
+        
+        
+        
+                <article id="about" class="about">
+                    <video class="about__video" controls autoplay>
+                        <source src="images/video.mp4" type="video/mp4" >
+                        your browser does not support the video tag
+                    </video>
+        
+                    <br>
+        
+                    <h3 class="about__quote"><q>
+                        Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.
+                    </q></h3>
+        
+                    <br>
+        
+                    <p class="about__description"> In a world where passion and dedication pave the path to success, I, Meaza Tadele, am a software student at Addis Ababa University, driven by my unwavering love for the field. From the moment I embarked on this journey, I knew that software development was my true calling. Each line of code I write, each problem I solve, brings me immense joy and fulfillment. It is this happiness that fuels my determination to excel and make a lasting impact in the world of technology.</p>
+        
+                    <br>
+        
+                    <p class="about__description">As a software student, I embrace the ever-evolving nature of the industry. I thrive in the face of challenges, constantly seeking opportunities to expand my knowledge and skills. With a strong foundation in programming languages such as Java and Python, I am always eager to explore new frameworks and technologies that push the boundaries of what is possible. From designing sleek user interfaces to developing robust backend systems, I find solace in the art of crafting elegant and efficient software solutions.</p>
+        
+                    <br>
+                    <br>
+        
+                    <p class="about__description">Here are some key aspects of my journey:</p>
+                    <ul class="about__description">
+                        <li>Constantly seeking opportunities to expand knowledge and skills</li>
+                        <li> Strong foundation in programming languages like Java and Python</li>
+                        <li>Eager to explore new frameworks and technologies</li>
+                        <li> Passionate about designing sleek user interfaces and developing robust backend systems</li>
+                    </ul>
+        
+                    <br>
+        
+                    <p class="about__description"> Outside the realm of coding, I am an avid learner and a curious soul. I believe that true growth comes from embracing diverse experiences and perspectives. Whether it's delving into the realms of artificial intelligence or diving into the depths of data analysis, I am constantly seeking ways to broaden my horizons and stay ahead of the technological curve. I am a firm believer in collaboration and teamwork, recognizing the power of collective intelligence to drive innovation and create groundbreaking solutions.</p>
+                    <div class="about__audio">
+                        <audio src="images/willow-TaylorSwift.mp3" controls>
+                            Your browser does not support the audio element.
+                        </audio>
             
-
-            <section>
-                <div class="service_image">
-                    <img src="images/Analysis_picture.jpg" alt="website analysis">
-                    <h5>Website Analytics </h5>
-                    <p> I set up analytics tools like Google Analytics to track website performance, user behavior, and conversion rates.
-                    They analyze data to gain insights into website traffic, user engagement, and conversion funnels. Developers can also generate reports and provide clients with valuable
-                    information to make data-driven decisions for improving website performance, identifying areas for optimization, and refining marketing strategies.</p>
-                </div>
-            </section>
-
-
-            
-            <section>
-                <div class="service_image">
+                        <button class="about__button">work <br> with me</button>
+                    </div>
                     
-                    <img src="images/mobile_design.jpg" alt="mobile development picture">
-                    <div><h5>Mobile Development </h5></div>
-                    <p> I also offer mobile app development services, creating mobile applications that complement or integrate with the website.
-                    Mobile app development involves designing and building native or hybrid apps for iOS and Android platforms.
-                    Developers use programming languages like Swift or Objective-C for iOS apps and Java or Kotlin for Android apps.
-                    Mobile app development allows businesses to extend their online presence and provide users with a seamless experience across both web and mobile platforms.</p>
-                </div>
-            </section>
-            
-
-            <section>
-                <div class="service_image">
-                    <img src="images/Community.jpg" alt=" meeting picture">
-                    <div><h5>Website Consulting </h5></div>
-                    <p>I offer consulting services to guide clients in making
-                    informed decisions about their website strategy. This may involve advising on technology selection, recommending appropriate platforms or frameworks,
-                    assisting with digital marketing strategies, conducting website audits, or providing guidance on improving website performance, security, and user experience.
-                    Website consulting helps clients align their online presence with their business goals and make strategic decisions for their website's success</p>
-                </div>
+                    
         
-            </section>
-
-            <section>
-                <div class="service_image">
-                    <img src="images/mobile_design.jpg" alt="mobile development picture">
-                    <div><h5>Mobile Development </h5></div>
-                    <p> I also offer mobile app development services, creating mobile applications that complement or integrate with the website.
-                    Mobile app development involves designing and building native or hybrid apps for iOS and Android platforms.
-                    Developers use programming languages like Swift or Objective-C for iOS apps and Java or Kotlin for Android apps.
-                    Mobile app development allows businesses to extend their online presence and provide users with a seamless experience across both web and mobile platforms.</p>
-                </div>
-            </section>
-            
-
-        </article>
-
-        <!-- ##########################    contact page    ########################### -->
-
-
-
-
-        <article id="contact">
-
-            <div id="contactpage">
-                
-                <div><h2>Let's work together to build a strong online presence that engages your audience and drives results</h2></div>
-                <div id="social">
-                    <ul id="socialmedia">
-                        <li><div><a href="https://www.tiktok.com/foryou"><i class="fa-brands fa-tiktok fa-2xl"  style="color: #66898d;"></i></a></div></li>
-                        <li><div><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in fa-2xl"  style="color: #66898d;"></i></a></div></li>
-                        <li><div><a href="https://www.instagram.com/tona_accessoriess/"><i class="fa-brands fa-instagram fa-2xl"  style="color: #66898d;"></i></a></div></li>
-                        <li><div><a href="https://github.com/MeazaTadele/UGR-6378-14/tree/main/designs"><i class="fa-brands fa-github fa-2xl" style="color: #66898d;"></i></a></div></li>
-                    </ul>
-                </div>
-                <div id="dropdown"><a href="#contactme"><i class="fa-solid fa-circle-chevron-down"  style="color: #e1a66f;"></i></a></div>
-
-            </div>
-            
-
-            <section id="contactme">
-                
-                <h3>Get In Touch </h3>
-                <address>
-                    <ul>
-                        <li class="icon"><div><i class="fa-solid fa-phone fa-2xl"></i></div></li>
-                        <li><b>Address</b></li>
-                        <li>Niger road</li>
-                        <li>Addis Ababa</li>
-                        <li>Ethiopia , Africa</li>
-                        <li>postal code 6000</li>
-                    </ul>
-
-                    <ul>
-                        <li class="icon"><i class="fa-solid fa-location-dot fa-2xl"></i></li>
-                        <li><b>Phone</b></li>
-                        <li>mobile 1: 090909090</li>
-                        <li>mobile 2: 093898990</li>
-                        <li>mobile 3: 093837890</li>
-                        <li>mobile 4: 090389839</li>
-                    </ul>
-
-                    <ul>
-                        <li class="icon"><i class="fa-solid fa-envelope fa-2xl"></i></li>
-                        <li><b>Emails</b></li>
-                        <li><a href="mailto:meaza@gmail.com">meaza@gmail.com</a></li>
-                        <li><a href="mailto:meaztad@gmail.com">meaztad@gmail.com</a></li>
-                        <li><a href="mailto:manager@gmail.com">manager@gmail.com</a></li>
-                    </ul>
-
-                </address>
-
-            </section>
-            <footer>
-                <div class="container">
-                    <p>&copy; 2023 Meaza Tadele. All rights reserved.</p>
-                </div>
-            </footer>
-
-        </article>
+                </article>
         
-    </body>
+                <!-- ##########################    experiance page    ########################### -->
+        
+        
+        
+                <article id="experiance" class="experiance">
+                    
+                    <h2 class="experiance__title">My best works</h2>
+                    <div class="experiance__bestwork">
+                        <a href="https://girlboss.com/">
+                            <img src="images/work1.jpg" alt="my work" >
+                        </a>
+                        <a href="https://www.fatchoynyc.com/">
+                            <img src="images/work2.jpg" alt="my work" >
+                        </a>
+                        <a href="https://grette.no/en/">
+                            <img src="images/work3.jpg" alt="my work" >
+                        </a>
+        
+                    </div>
+        
+                    <section id="timeline" class="timeline">
+                        <h2 class="timeline__title">Time line</h2>
+                        
+                        <div class="timeline__experience--reverse">
+                            <div class="timeline__date-circle"><h3>2019</h3></div>
+                            <div class="timeline__date"><time datetime="2023-11-25"><b>OCT, 2019 - Dec, 2020</b></time></div>
+                            <div class="timeline__description">
+                                <h4>Apple</h4>
+                                <p>I have been the iOS developer at Apple, working on the development of the latest iPhone features. I have been the industrial designer at Apple, responsible for designing sleek and innovative product designs</p>
+                            </div>
+                        </div>
+                        
+        
+                        <div class="timeline__experience">
+                            <div class="timeline__date-circle"><h3>2020</h3></div>
+                            <div class="timeline__date"><time datetime="2023-11-25"><b>OCT, 2019 - Dec, 2020</b></time></div>
+                            <div class="timeline__description">
+                                <h4>Microsoft</h4>
+                                <p>I have been the software engineer at Microsoft, working on the development of Windows operating systems.I have been the data scientist at Microsoft, analyzing large datasets to improve machine learning algorithms.</p>
+                            </div>
+                        </div>
+        
+                        
+                        <div class="timeline__experience--reverse">
+                            <div class="timeline__date-circle"><h3>2021</h3></div>
+                            <div class="timeline__date"><time datetime="2023-11-25"><b> Aug, 2020 - March, 2021</b></time></div>
+                            <div class="timeline__description">
+                                <h4>Apple</h4>
+                                <p> I have been the iOS developer at Apple, working on the development of the latest iPhone features. <br>I have been the industrial designer at Apple, responsible for designing sleek and innovative product designs</p>
+                            </div>
+                        </div>
+        
+                        <div class="timeline__experience">
+                            <div class="timeline__date-circle"><h3>2022</h3></div>
+                            <div class="timeline__date"><time datetime="2023-11-25"><b>Aug, 2022 - March, 2023</b></time></div>
+                            <div class="timeline__description">
+                                <h4>Amazon</h4>
+                                <p>I have been the front-end developer at Amazon, working on the user interface of the e-commerce platform.
+                                    I have been the supply chain manager at Amazon, optimizing the logistics and inventory management processes.</p>
+                            </div>
+                        </div>
+        
+                        
+                        <div class="timeline__experience--reverse">
+                            <div class="timeline__date-circle"><h3>2023</h3></div>
+                            <div class="timeline__date"><time datetime="2023-11-25"><b>Aug, 2022 - March, 2023</b></time></div>
+                            <div class="timeline__description">
+                                <h4>Meta</h4>
+                                <p>I have been the product manager at Facebook, overseeing the development and launch of new features on the platform.
+                                    I have been the data privacy specialist at Facebook, ensuring compliance with regulations and protecting user data.</p>
+                            </div>
+                        </div>
+        
+        
+                    </section>
+        
+                </article>
+
+                
+        
+        
+                <!-- ##########################    services page     ########################### -->
+        
+        
+                <article id="services" class="Services">
+                    <h2 class="services__title" >These are the Services i provide</h2>
+        
+                    <section class="service">
+                        <div class="service__item">
+                            <div class="service__image-container">
+                                <img src="images/software.jpg" alt="website design" class="service__image">
+                                <h5 class="service__heading">website design</h5>
+                            </div>
+                            <p  class="service__description"> Website design involves creating visually appealing and user-friendly layouts for websites. It includes designing the overall look and feel of the website, including color schemes,
+                            typography, and graphical elements. Website designers often use tools like wireframes, mockups, and prototypes to showcase the proposed design to clients before moving into development.</p>
+                        </div>
+                        
+                    </section>
+                    
+        
+                    <section class="service">
+                        <div class="service__item">
+                            <div class="service__image-container">
+                                <img src="images/Analysis_picture.jpg" alt="website analysis" class="service__image">
+                                <h5 class="service__heading">Website Analytics </h5>>
+                            </div>
+                            <p class="service__description"> I set up analytics tools like Google Analytics to track website performance, user behavior, and conversion rates.
+                            They analyze data to gain insights into website traffic, user engagement, and conversion funnels. Developers can also generate reports and provide clients with valuable
+                            information to make data-driven decisions for improving website performance, identifying areas for optimization, and refining marketing strategies.</p>
+                        </div>
+                    </section>
+        
+                    
+                    <section class="service">
+                        <div class="service__item">
+                            <div class="service__image-container">
+                                <img src="images/mobile_design.jpg" alt="mobile development picture" class="service__image">
+                                <h5 class="service__heading">Mobile Development </h5>
+                            </div>
+                            <p class="service__description"> I also offer mobile app development services, creating mobile applications that complement or integrate with the website.
+                            Mobile app development involves designing and building native or hybrid apps for iOS and Android platforms.
+                            Developers use programming languages like Swift or Objective-C for iOS apps and Java or Kotlin for Android apps.
+                            Mobile app development allows businesses to extend their online presence and provide users with a seamless experience across both web and mobile platforms.</p>
+                        </div>
+                    </section>
+                    
+        
+                    <section class="service">
+                        <div class="service__item">
+                            <div class="service__image-container">
+                                <img src="images/mobile_design.jpg" alt="mobile development picture" class="service__image">
+                                <h5 class="service__heading">Mobile Development </h5>
+                            </div>
+                            <p class="service__description"> I also offer mobile app development services, creating mobile applications that complement or integrate with the website.
+                            Mobile app development involves designing and building native or hybrid apps for iOS and Android platforms.
+                            Developers use programming languages like Swift or Objective-C for iOS apps and Java or Kotlin for Android apps.
+                            Mobile app development allows businesses to extend their online presence and provide users with a seamless experience across both web and mobile platforms.</p>
+                        </div>
+                    </section>
+                    
+        
+                </article>
+        
+                <!-- ##########################    contact page    ########################### -->
+        
+        
+        
+        
+                <article id="contact" class="contact">
+        
+                    <div class="contact__page">
+                        
+                        <div><h2 class="contact__title">Let's work together to build a strong online presence that engages your audience and drives results</h2></div>
+                        <div class="contact__social">
+                            <ul class="contact__social-media">
+                                <li><div><a href="https://www.tiktok.com/foryou"><i class="fa-brands fa-tiktok fa-2xl"  style="color: #66898d;"></i></a></div></li>
+                                <li><div><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in fa-2xl"  style="color: #66898d;"></i></a></div></li>
+                                <li><div><a href="https://www.instagram.com/tona_accessoriess/"><i class="fa-brands fa-instagram fa-2xl"  style="color: #66898d;"></i></a></div></li>
+                                <li><div><a href="https://github.com/MeazaTadele/UGR-6378-14/tree/main/designs"><i class="fa-brands fa-github fa-2xl" style="color: #66898d;"></i></a></div></li>
+                            </ul>
+                        </div>
+                        <div class="contact__dropdown"><a href="#contactme"><i class="fa-solid fa-circle-chevron-down"  style="color: #e1a66f;"></i></a></div>
+        
+                    </div>
+                    
+        
+                    <section id="contactme" class="contact__details">
+                        
+                        <h3 class="contact__header">Get In Touch </h3>
+                        <address class="contact__address">
+                            <ul class="contact__address--list">
+                                <li class="contact__address--list-icon"><div><i class="fa-solid fa-phone fa-2xl"></i></div></li>
+                                <li><b>Address</b></li>
+                                <li>Niger road</li>
+                                <li>Addis Ababa</li>
+                                <li>Ethiopia , Africa</li>
+                                <li>postal code 6000</li>
+                            </ul>
+        
+                            <ul class="contact__address--list">
+                                <li class="contact__address--list-icon"><i class="fa-solid fa-location-dot fa-2xl"></i></li>
+                                <li><b>Phone</b></li>
+                                <li>mobile 1: 090909090</li>
+                                <li>mobile 2: 093898990</li>
+                                <li>mobile 3: 093837890</li>
+                                <li>mobile 4: 090389839</li>
+                            </ul>
+        
+                            <ul class="contact__address--list">
+                                <li class=" contact__address--list-icon"><i class="fa-solid fa-envelope fa-2xl"></i></li>
+                                <li><b>Emails</b></li>
+                                <li><a href="mailto:meaza@gmail.com">meaza@gmail.com</a></li>
+                                <li><a href="mailto:meaztad@gmail.com">meaztad@gmail.com</a></li>
+                                <li><a href="mailto:manager@gmail.com">manager@gmail.com</a></li>
+                            </ul>
+        
+                        </address>
+        
+                    </section>
+                </article>
+                <footer class="footer">
+                    <p class="footer__text">&copy; 2023 Meaza Tadele. All rights reserved.</p>
+                </footer>
+            </main>
+        </div>
+
+
+    
+</body>
 
 </html>
+
+
+        
