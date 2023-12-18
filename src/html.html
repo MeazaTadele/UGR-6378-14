@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>portfolio</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles/debug.css">
     </head>
     <body>
         <div class="container">
             <nav class="nav">
-                <ul class="nav__list">
+                <ul class="nav__list" id="dropdownClick">
                     <li class="nav__item nav__item--profile-pic"><img src="images/profilepicture.JPG" alt="profile picture"></li>
+                    <li class="nav__item" id="current"><a href="#" class="nav__link"><i class="fa-solid fa-house" style="color: #e1a66f"></i> Home</a></li>
                     <li class="nav__item"><a href="#home" class="nav__link"><i class="fa-solid fa-house" style="color: #e1a66f"></i> Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link"><i class="fa-solid fa-face-meh-blank" style="color: #e1a66f"></i> who am i?</a></li>
                     <li class="nav__item"><a href="#experiance" class="nav__link"><i class="fa-solid fa-briefcase" style="color: #e1a66f"></i>Experiance</a></li>
                     <li class="nav__item"><a href="#services" class="nav__link"> <i class="fa-solid fa-hand-holding" style="color: #e1a66f"></i>Services</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link"><i class="fa-solid fa-envelope" style="color: #e1a66f"></i>Contact</a></li>
-                    <li class="nav__item nav__item--dropdown"><a href="#" class="nav__link">&#9776;</a></li>
+                    <li class="nav__item nav__item--dropdown" id="humburger"><a href="javascript:void(0);" onclick="dropdownMenu()" class="nav__link">&#9776;</a></li>
                 </ul>
             </nav>
 
             <main class="main">
                 <article class="home" id="home">
-                    <button class="home__button home__button--work-with-me-desktop">work <br> with me</button>
+                    <button class="home__button home__button--work-with-me-desktop  animate-on-load" id="workwithme-desktop">work <br> with me</button>
                     <div class="home__profile-picture">
                         <img src="images/profilepicture.JPG" alt="profile picture">
                     </div>
         
-                    <div class="home__entry">
+                    <div class="home__entry  animate-on-load">
                         <h3 class="home__title">Welcome to my website!</h3>
-                        <p class="home__text">I'm Meaza, a third-year web developer from Addis Ababa, Ethiopia. Explore my projects and witness my passion for coding as I continue to grow in this exciting field. Let's embark on this digital adventure together!</p>
+                        <p class="home__text-all home__text">I'm Meaza, a third-year web developer from Addis Ababa, Ethiopia. Explore my projects and witness my passion for coding as I continue to grow in this exciting field. Let's embark on this digital adventure together!</p>
                     </div>
         
-                    <div class="home__buttons">
+                    <div class="home__buttons  animate-on-load">
                         
-                        <button class="home__button home__button--more"><i class="fa-solid fa-circle-arrow-down fa-lg"></i></button>
-                        <button class="home__button home__button--work-with-me">work <br> with me</button>
+                        <button class="home__button home__button--more" id="Readmore-mobile"><i class="fa-solid fa-circle-arrow-down fa-lg"></i></button>
+                        <button class="home__button home__button--work-with-me" id="workwithme-mobile" >work <br> with me</button>
                     </div>
-                    <button class="home__button  home__button--more-desktop">&#x2193;Readmore</button>
+                    <button class="home__button  home__button--more-desktop  animate-on-load" id="Readmore-desktop">&#x2193;Readmore </button>
                 </article>
         
         
@@ -44,31 +48,31 @@
         
         
         
-                <article id="about" class="about">
-                    <video class="about__video" controls autoplay>
+                <article id="about" class="about ">
+                    <video class="about__video animate-on-scroll" controls autoplay>
                         <source src="images/video.mp4" type="video/mp4" >
                         your browser does not support the video tag
                     </video>
         
                     <br>
         
-                    <h3 class="about__quote"><q>
+                    <h3 class="about__quote animate-on-scroll"><q>
                         Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.
                     </q></h3>
         
                     <br>
         
-                    <p class="about__description"> In a world where passion and dedication pave the path to success, I, Meaza Tadele, am a software student at Addis Ababa University, driven by my unwavering love for the field. From the moment I embarked on this journey, I knew that software development was my true calling. Each line of code I write, each problem I solve, brings me immense joy and fulfillment. It is this happiness that fuels my determination to excel and make a lasting impact in the world of technology.</p>
+                    <p class="about__description animate-on-scroll"> In a world where passion and dedication pave the path to success, I, Meaza Tadele, am a software student at Addis Ababa University, driven by my unwavering love for the field. From the moment I embarked on this journey, I knew that software development was my true calling. Each line of code I write, each problem I solve, brings me immense joy and fulfillment. It is this happiness that fuels my determination to excel and make a lasting impact in the world of technology.</p>
         
                     <br>
         
-                    <p class="about__description">As a software student, I embrace the ever-evolving nature of the industry. I thrive in the face of challenges, constantly seeking opportunities to expand my knowledge and skills. With a strong foundation in programming languages such as Java and Python, I am always eager to explore new frameworks and technologies that push the boundaries of what is possible. From designing sleek user interfaces to developing robust backend systems, I find solace in the art of crafting elegant and efficient software solutions.</p>
+                    <p class="about__description animate-on-scroll">As a software student, I embrace the ever-evolving nature of the industry. I thrive in the face of challenges, constantly seeking opportunities to expand my knowledge and skills. With a strong foundation in programming languages such as Java and Python, I am always eager to explore new frameworks and technologies that push the boundaries of what is possible. From designing sleek user interfaces to developing robust backend systems, I find solace in the art of crafting elegant and efficient software solutions.</p>
         
                     <br>
                     <br>
         
-                    <p class="about__description">Here are some key aspects of my journey:</p>
-                    <ul class="about__description">
+                    <p class="about__description animate-on-scroll">Here are some key aspects of my journey:</p>
+                    <ul class="about__description animate-on-scroll">
                         <li>Constantly seeking opportunities to expand knowledge and skills</li>
                         <li> Strong foundation in programming languages like Java and Python</li>
                         <li>Eager to explore new frameworks and technologies</li>
@@ -77,13 +81,13 @@
         
                     <br>
         
-                    <p class="about__description"> Outside the realm of coding, I am an avid learner and a curious soul. I believe that true growth comes from embracing diverse experiences and perspectives. Whether it's delving into the realms of artificial intelligence or diving into the depths of data analysis, I am constantly seeking ways to broaden my horizons and stay ahead of the technological curve. I am a firm believer in collaboration and teamwork, recognizing the power of collective intelligence to drive innovation and create groundbreaking solutions.</p>
-                    <div class="about__audio">
+                    <p class="about__description animate-on-scroll"> Outside the realm of coding, I am an avid learner and a curious soul. I believe that true growth comes from embracing diverse experiences and perspectives. Whether it's delving into the realms of artificial intelligence or diving into the depths of data analysis, I am constantly seeking ways to broaden my horizons and stay ahead of the technological curve. I am a firm believer in collaboration and teamwork, recognizing the power of collective intelligence to drive innovation and create groundbreaking solutions.</p>
+                    <div class="about__audio animate-on-scroll">
                         <audio src="images/willow-TaylorSwift.mp3" controls>
                             Your browser does not support the audio element.
                         </audio>
             
-                        <button class="about__button">work <br> with me</button>
+                        <button class="about__button" id="workwithme-about-page">work <br> with me</button>
                     </div>
                     
                     
@@ -94,10 +98,10 @@
         
         
         
-                <article id="experiance" class="experiance">
+                <article id="experiance" class="experiance animate-on-scroll">
                     
                     <h2 class="experiance__title">My best works</h2>
-                    <div class="experiance__bestwork">
+                    <div class="experiance__bestwork animate-on-load">
                         <a href="https://girlboss.com/">
                             <img src="images/work1.jpg" alt="my work" >
                         </a>
@@ -110,7 +114,7 @@
         
                     </div>
         
-                    <section id="timeline" class="timeline">
+                    <section id="timeline" class="timeline animate-on-scroll">
                         <h2 class="timeline__title">Time line</h2>
                         
                         <div class="timeline__experience--reverse">
@@ -123,7 +127,7 @@
                         </div>
                         
         
-                        <div class="timeline__experience">
+                        <div class="timeline__experience animate-on-scroll">
                             <div class="timeline__date-circle"><h3>2020</h3></div>
                             <div class="timeline__date"><time datetime="2023-11-25"><b>OCT, 2019 - Dec, 2020</b></time></div>
                             <div class="timeline__description">
@@ -133,7 +137,7 @@
                         </div>
         
                         
-                        <div class="timeline__experience--reverse">
+                        <div class="timeline__experience--reverse animate-on-scroll">
                             <div class="timeline__date-circle"><h3>2021</h3></div>
                             <div class="timeline__date"><time datetime="2023-11-25"><b> Aug, 2020 - March, 2021</b></time></div>
                             <div class="timeline__description">
@@ -142,7 +146,7 @@
                             </div>
                         </div>
         
-                        <div class="timeline__experience">
+                        <div class="timeline__experience animate-on-scroll">
                             <div class="timeline__date-circle"><h3>2022</h3></div>
                             <div class="timeline__date"><time datetime="2023-11-25"><b>Aug, 2022 - March, 2023</b></time></div>
                             <div class="timeline__description">
@@ -153,7 +157,7 @@
                         </div>
         
                         
-                        <div class="timeline__experience--reverse">
+                        <div class="timeline__experience--reverse animate-on-scroll">
                             <div class="timeline__date-circle"><h3>2023</h3></div>
                             <div class="timeline__date"><time datetime="2023-11-25"><b>Aug, 2022 - March, 2023</b></time></div>
                             <div class="timeline__description">
@@ -174,10 +178,10 @@
                 <!-- ##########################    services page     ########################### -->
         
         
-                <article id="services" class="Services">
+                <article id="services" class="Services ">
                     <h2 class="services__title" >These are the Services i provide</h2>
         
-                    <section class="service">
+                    <section class="service animate-on-scroll">
                         <div class="service__item">
                             <div class="service__image-container">
                                 <img src="images/software.jpg" alt="website design" class="service__image">
@@ -190,11 +194,11 @@
                     </section>
                     
         
-                    <section class="service">
-                        <div class="service__item">
+                    <section class="service animate-on-scroll">
+                        <div class="service__item ">
                             <div class="service__image-container">
                                 <img src="images/Analysis_picture.jpg" alt="website analysis" class="service__image">
-                                <h5 class="service__heading">Website Analytics </h5>>
+                                <h5 class="service__heading">Website Analytics </h5>
                             </div>
                             <p class="service__description"> I set up analytics tools like Google Analytics to track website performance, user behavior, and conversion rates.
                             They analyze data to gain insights into website traffic, user engagement, and conversion funnels. Developers can also generate reports and provide clients with valuable
@@ -203,7 +207,7 @@
                     </section>
         
                     
-                    <section class="service">
+                    <section class="service animate-on-scroll">
                         <div class="service__item">
                             <div class="service__image-container">
                                 <img src="images/mobile_design.jpg" alt="mobile development picture" class="service__image">
@@ -217,7 +221,7 @@
                     </section>
                     
         
-                    <section class="service">
+                    <section class="service animate-on-scroll">
                         <div class="service__item">
                             <div class="service__image-container">
                                 <img src="images/mobile_design.jpg" alt="mobile development picture" class="service__image">
@@ -245,10 +249,10 @@
                         <div><h2 class="contact__title">Let's work together to build a strong online presence that engages your audience and drives results</h2></div>
                         <div class="contact__social">
                             <ul class="contact__social-media">
-                                <li><div><a href="https://www.tiktok.com/foryou"><i class="fa-brands fa-tiktok fa-2xl"  style="color: #66898d;"></i></a></div></li>
-                                <li><div><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in fa-2xl"  style="color: #66898d;"></i></a></div></li>
-                                <li><div><a href="https://www.instagram.com/tona_accessoriess/"><i class="fa-brands fa-instagram fa-2xl"  style="color: #66898d;"></i></a></div></li>
-                                <li><div><a href="https://github.com/MeazaTadele/UGR-6378-14/tree/main/designs"><i class="fa-brands fa-github fa-2xl" style="color: #66898d;"></i></a></div></li>
+                                <li><div><a href="https://www.tiktok.com/foryou"><i class="fa-brands fa-tiktok fa-2xl"></i></a></div></li>
+                                <li><div><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a></div></li>
+                                <li><div><a href="https://www.instagram.com/tona_accessoriess/"><i class="fa-brands fa-instagram fa-2xl" ></i></a></div></li>
+                                <li><div><a href="https://github.com/MeazaTadele/UGR-6378-14/tree/main/designs"><i class="fa-brands fa-github fa-2xl"></i></a></div></li>
                             </ul>
                         </div>
                         <div class="contact__dropdown"><a href="#contactme"><i class="fa-solid fa-circle-chevron-down"  style="color: #e1a66f;"></i></a></div>
@@ -259,7 +263,7 @@
                     <section id="contactme" class="contact__details">
                         
                         <h3 class="contact__header">Get In Touch </h3>
-                        <address class="contact__address">
+                        <address class="contact__address animate-on-scroll">
                             <ul class="contact__address--list">
                                 <li class="contact__address--list-icon"><div><i class="fa-solid fa-phone fa-2xl"></i></div></li>
                                 <li><b>Address</b></li>
@@ -270,7 +274,7 @@
                             </ul>
         
                             <ul class="contact__address--list">
-                                <li class="contact__address--list-icon"><i class="fa-solid fa-location-dot fa-2xl"></i></li>
+                                <li class="contact__address--list-icon"><div><i class="fa-solid fa-location-dot fa-2xl"></i></div></li>
                                 <li><b>Phone</b></li>
                                 <li>mobile 1: 090909090</li>
                                 <li>mobile 2: 093898990</li>
@@ -279,7 +283,7 @@
                             </ul>
         
                             <ul class="contact__address--list">
-                                <li class=" contact__address--list-icon"><i class="fa-solid fa-envelope fa-2xl"></i></li>
+                                <li class="contact__address--list-icon"><div><i class="fa-solid fa-envelope fa-2xl"></i></div></li>
                                 <li><b>Emails</b></li>
                                 <li><a href="mailto:meaza@gmail.com">meaza@gmail.com</a></li>
                                 <li><a href="mailto:meaztad@gmail.com">meaztad@gmail.com</a></li>
@@ -290,14 +294,14 @@
         
                     </section>
                 </article>
+
                 <footer class="footer">
                     <p class="footer__text">&copy; 2023 Meaza Tadele. All rights reserved.</p>
                 </footer>
+
+                <script src="js/javascript.js"></script>
             </main>
         </div>
-
-
-    
 </body>
 
 </html>
