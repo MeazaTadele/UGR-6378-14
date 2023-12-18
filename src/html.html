@@ -1,250 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>portfolio</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="styles/debug.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+
+        
+            <!-- custom css for the experinace time line part -->
+        <style>
+            .round_background{
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .timeline_element_reverse , .timeline_element{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+            }
+
+            @media screen and (min-width: 768px) and (max-width: 1024px) and (max-height:500px) and (orientation: landscape) {
+                .menu__image {
+                    display: none;
+                }
+            }
+
+            @media screen and (min-width:768px) and (min-height:501px) {
+                .timeline_element, .timeline_element_reverse{
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    margin-left: auto;
+                    margin-right: auto;
+                    gap: 50px;
+                }
+                .timeline_element_reverse{
+                    flex-direction: row-reverse;
+
+                }
+                .timeline__description{
+                    order: -1;
+                    width: 2000px;
+
+                }
+                .timeline__date{
+                    width: 2111px;
+                }
+            }
+
+            
+        </style>
+
     </head>
+
     <body>
-        <nav>
-            <ul>
-                <li><a href="">&#9776;</a></li>
-                <li><a href="#home"><i class="fa-solid fa-house" style="color: #070808;"></i> Home</a></li>
-                <li><a href="#about"><i class="fa-solid fa-face-meh-blank" style="color: #070808;"></i> who am i?</a></li>
-                <li><a href="#experiance"><i class="fa-solid fa-briefcase" style="color: #070808;"></i>Experiance</a></li>
-                <li><a href="#services"> <i class="fa-solid fa-hand-holding" style="color: #070808;"></i>Services</a></li>
-                <li><a href="#contact"><i class="fa-solid fa-envelope" style="color: #070808;"></i>Contact</a></li>
-            </ul>
-        </nav>
-    
+            <nav class="navbar has-background-primary is-hidden-tablet" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item"  id="currentpage" href="#">
+                        Home
+                    </a>
+                    <a role="button" class="navbar-burger" id="burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+        
+                <div id="nav-links" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="#home">Home</a>
+                        <a class="navbar-item" href="#about">About</a>
+                        <a class="navbar-item" href="#experiance">experiance</a>
+                        <a class="navbar-item" href="#service">service</a>
+                        <a class="navbar-item" href="#contact">Contact</a>
+                    </div>
+                </div>
+            </nav>
 
-        <!-- ##########################    home     ########################### -->
+            <div class="columns">
+                <div class="column is-3 is-hidden-mobile">
+                    <section class="hero is-primary is-fullheight">
+                        <aside class="menu">
+                            <ul class="menu-list ">
+                                <li class="menu-item image is-256x256 is-rounded m-6 p-4 menu__image" ><img src="images/profilepicture.JPG" alt="profile picture" class="image is-rounded"></li>
+                                <li class="menu-item  py-4 is-size-4 has-text-black" ><a href="#home"><i class="fa-solid fa-house is-primary" ></i> Home</a></li>
+                                <li class="menu-item  py-4 is-size-4 has-text-black"><a href="#about"><i class="fa-solid fa-face-meh-blank"></i> who am i?</a></li>
+                                <li class="menu-item  py-4 is-size-4 has-text-black"><a href="#experiance"><i class="fa-solid fa-briefcase"></i>Experiance</a></li>
+                                <li class="menu-item  py-4 is-size-4 has-text-black"><a href="#services"><i class="fa-solid fa-hand-holding"></i>Services</a></li>
+                                <li class="menu-item is-size-4 has-text-black"><a href="#contact"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                </div>
+            
+
+                <main class="column is-9 is-fullheight" style="height: 100vh; overflow-y: auto;">
+                    <!-- ###############  home   ################ -->
+                    <article class="is-flex is-flex-direction-column is-justify-content-space-around hero is-fullheight" id="home">
+
+                        <button class="is-hidden-mobile button is-medium has-text-centered has-background-warning is-align-self-flex-end mr-6" id="workwithme-desktop">work <br> with me</button>
+
+                        <div class=" image is-hidden-tablet is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
+                            <img class="is-rounded m-5 " src="images/profilepicture.JPG" alt="profile picture" style="width: 200px;">
+                        </div>
+            
+                        <div class="is-flex is-flex-direction-column has-background-primary is-align-items-center p-5 mx-6">
+                            <h3 class="title has-text-centered mb-6" >Welcome to my website!</h3>
+                            <p class=" subtitle has-text-justified">I'm Meaza, a third-year web developer from Addis Ababa, Ethiopia. Explore my projects and witness my passion for coding as I continue to grow in this exciting field. Let's embark on this digital adventure together!</p>
+                        </div>
+            
+                        <div class="is-flex is-justify-content-center is-justify-content-space-around m-6 is-hidden-tablet">
+                            <button class="button has-background-warning" id="Readmore-mobile"><i class="fa-solid fa-circle-arrow-down fa-lg"></i></button>
+                            <button class="button has-background-warning"  id="workwithme-mobile" >work <br> with me</button>
+                        </div>
+
+                        <button class="is-hidden-mobile button is-small is-medium has-text-centered has-background-warning is-align-self-center mr-6" id="Readmore-desktop"> &#x2193 Readmore</button>
+
+                    </article>
+
+                    <!-- ############   about   ########## -->
+
+
+                    <article id="about" class="is-flex is-flex-direction-column m-5 has-text-justified">
+
+                    <video class="video" controls autoplay>
+                        <source src="images/video.mp4" type="video/mp4" >
+                        your browser does not support the video tag
+                    </video>
+        
+                    <br>
+        
+                    <h3><q>
+                        Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.
+                    </q></h3>
+        
+                    <br>
+        
+                    <p> In a world where passion and dedication pave the path to success, I, Meaza Tadele, am a software student at Addis Ababa University, driven by my unwavering love for the field. From the moment I embarked on this journey, I knew that software development was my true calling. Each line of code I write, each problem I solve, brings me immense joy and fulfillment. It is this happiness that fuels my determination to excel and make a lasting impact in the world of technology.</p>
+        
+                    <br>
+        
+                    <p>As a software student, I embrace the ever-evolving nature of the industry. I thrive in the face of challenges, constantly seeking opportunities to expand my knowledge and skills. With a strong foundation in programming languages such as Java and Python, I am always eager to explore new frameworks and technologies that push the boundaries of what is possible. From designing sleek user interfaces to developing robust backend systems, I find solace in the art of crafting elegant and efficient software solutions.</p>
+        
+                    <br>
+                    <br>
+        
+                    <p class="subtitle">Here are some key aspects of my journey:</p>
+                    <ul class="ml-6" style="list-style:disc;">
+                        <li>Constantly seeking opportunities to expand knowledge and skills</li>
+                        <li> Strong foundation in programming languages like Java and Python</li>
+                        <li>Eager to explore new frameworks and technologies</li>
+                        <li> Passionate about designing sleek user interfaces and developing robust backend systems</li>
+                    </ul>
+        
+                    <br>
+        
+                    <p> Outside the realm of coding, I am an avid learner and a curious soul. I believe that true growth comes from embracing diverse experiences and perspectives. Whether it's delving into the realms of artificial intelligence or diving into the depths of data analysis, I am constantly seeking ways to broaden my horizons and stay ahead of the technological curve. I am a firm believer in collaboration and teamwork, recognizing the power of collective intelligence to drive innovation and create groundbreaking solutions.</p>
+                    
+                    <div class="is-flex is-justify-content-space-between my-6" >
+                        <audio src="images/willow-TaylorSwift.mp3" controls>
+                            Your browser does not support the audio element.
+                        </audio>
+            
+                        <button class="button is-medium has-text-centered has-background-warning is-align-self-flex-end mr-6"id="workwithme-about-page">work <br> with me</button>
+                    </div>
 
         
-        <article id="home">
+                </article>
 
-            <picture>
-                <img src="images/profilepicture.JPG" alt="profile picture">
-            </picture>
 
-            <h3>Welcome to my portfolio website!</h3>
-            <p>I'm Meaza, a third-year web developer from Addis Ababa, Ethiopia. <br> Explore my projects and witness my passion for coding as I continue <br> to grow in this exciting field. Let's embark on this digital adventure <br> together!</p>
+                <article id="experiance" class="my-6">
+                
+                <h2 class="subtitle has-text-centered has-text-weight-bold">My best works</h2>
+                <div class="columns is-align-items-center">
+                    <a href="https://girlboss.com/">
+                        <img class=" column is-12 mb-2" src="images/work1.jpg" alt="my work" >
+                    </a>
+                    <a href="https://www.fatchoynyc.com/">
+                        <img class="column is-12 image  mb-2"src="images/work2.jpg" alt="my work" >
+                    </a>
+                    <a href="https://grette.no/en/">
+                        <img class="column is-12 image mb-2"src="images/work3.jpg" alt="my work" >
+                    </a>
+
+                </div>
+                
+
+
+                <section id="timeline" class="section">
+                    <h2 class="subtitle has-text-centered mt-6 has-text-weight-bold">Time line</h2>
+                    <div class=" section timeline_element_reverse ">
+                        <div class="is-size-5 mr-5" ><h3 class="has-background-warning round_background">2019</h3></div>
+                        <div class="mb-5 timeline__date "><time datetime="2023-11-25"><b>OCT, 2019 - Dec, 2020</b></time></div>
+                        <div class="has-background-primary ml-6 timeline__description">
+                            <h4 class="subtitle">Apple</h4>
+                            <p>I have been the iOS developer at Apple, working on the development of the latest iPhone features. I have been the industrial designer at Apple, responsible for designing sleek and innovative product designs</p>
+                        </div>
+                    </div>
+
     
-            <button>work with me</button>
-            <button>read more</button>
-            <br>
-            <br>
-
-        </article>
-
-
-        <!-- ##########################    about     ########################### -->
-
-
-
-        <article id="about">
-            <video controls autoplay>
-                <source src="videos/video.mp4" type="video/mp4" >
-                your browser does not support the video tag
-            </video>
-
-            <br>
-
-            <h3><q>
-                "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful."
-            </q></h3>
-
-            <br>
-
-            <p> In a world where passion and dedication pave the path to success, I, Meaza Tadele, am a software student at Addis Ababa University, driven by my unwavering love for the field. From the moment I embarked on this journey, I knew that software development was my true calling. Each line of code I write, each problem I solve, brings me immense joy and fulfillment. It is this happiness that fuels my determination to excel and make a lasting impact in the world of technology.</p>
-
-            <br>
-
-            <p>As a software student, I embrace the ever-evolving nature of the industry. I thrive in the face of challenges, constantly seeking opportunities to expand my knowledge and skills. With a strong foundation in programming languages such as Java and Python, I am always eager to explore new frameworks and technologies that push the boundaries of what is possible. From designing sleek user interfaces to developing robust backend systems, I find solace in the art of crafting elegant and efficient software solutions.</p>
-
-            <br>
-            <br>
-
-            <p>Here are some key aspects of my journey:</p>
-            <ul>
-                <li>Constantly seeking opportunities to expand knowledge and skills</li>
-                <li> Strong foundation in programming languages like Java and Python</li>
-                <li>Eager to explore new frameworks and technologies</li>
-                <li> Passionate about designing sleek user interfaces and developing robust backend systems</li>
-            </ul>
-
-            <br>
-
-            <p> Outside the realm of coding, I am an avid learner and a curious soul. I believe that true growth comes from embracing diverse experiences and perspectives. Whether it's delving into the realms of artificial intelligence or diving into the depths of data analysis, I am constantly seeking ways to broaden my horizons and stay ahead of the technological curve. I am a firm believer in collaboration and teamwork, recognizing the power of collective intelligence to drive innovation and create groundbreaking solutions.</p>
-            
-            <audio src="audios/willow-TaylorSwift.mp3" controls>
-                Your browser does not support the audio element.
-            </audio>
-
-            <button>work with me</button>
-
-        </article>
-
-        <!-- ##########################    experiance page    ########################### -->
-
-
-
-        <article id="experiance">
-            
-            <h2>My best works</h2>
-                <img src="images/work1.jpg" alt="my work" >
-                <img src="images/work2.jpg" alt="my work" >
-                <img src="images/work3.jpg" alt="my work" >
-
-            <section>
-                <div>2019</div>
-                <div>
-                    <h4>Apple</h4>
-                    <p>I have been the iOS developer at Apple, working on the development of the latest iPhone features. <br>I have been the industrial designer at Apple, responsible for designing sleek and innovative product designs</p>
-                </div>
-                <div><time datetime="2023-11-25">OCT, 2019 - Dec, 2020</time></div>
-
-
-
-                <div>2020</div>
-                <div>
-                    <h4>Microsoft</h4>
-                    <p>I have been the software engineer at Microsoft, working on the development of Windows operating systems.I have been the data scientist at Microsoft, analyzing large datasets to improve machine learning algorithms.</p>
-                </div>
-                <div><time datetime="2023-11-25">Aug, 2020 - March, 2021</time></div>
-
-
-
-                <div>2021</div>
-                <div>
-                    <h4>Apple</h4>
-                    <p>I have been the iOS developer at Apple, working on the development of the latest iPhone features. <br>I have been the industrial designer at Apple, responsible for designing sleek and innovative product designs</p>
-                </div>
-                <div><time datetime="2023-11-25">Aug, 2020 - March, 2021</time></div>
-
-
-
-                <div>2022</div>
-                <div>
-                    <h4>Amazon</h4>
-                    <p>I have been the front-end developer at Amazon, working on the user interface of the e-commerce platform.
-                        I have been the supply chain manager at Amazon, optimizing the logistics and inventory management processes.</p>
-                </div>
-                <div><time datetime="2023-11-25">Aug, 2022 - March, 2023</time></div>
-
-
-                <div>2023</div>
-                <div>
-                    <h4>Meta</h4>
-                    <p>I have been the product manager at Facebook, overseeing the development and launch of new features on the platform.
-                        I have been the data privacy specialist at Facebook, ensuring compliance with regulations and protecting user data.</p>
-                </div>
-                <div><time datetime="2023-11-25">March, 2023- Dec, 2023</time></div>
-            </section>
-
-        </article>
-
-
-        <!-- ##########################    services page     ########################### -->
-
-
-        <article id="services">
-            <h2>Services i provide</h2>
-
-            <section>
-                <img src="images/software.jpg" alt="website design">
-                <p> Website design involves creating visually appealing and user-friendly layouts for websites. It includes designing the overall look and feel of the website, including color schemes,
-                    typography, and graphical elements. Website designers often use tools like wireframes, mockups, and prototypes to showcase the proposed design to clients before moving into development.</p>
-                <h4>website design</h4>
-            </section>
-            
-
-            <section>
-                <img src="images/Analysis_picture.jpg" alt="website analysis">
-                <p> I set up analytics tools like Google Analytics to track website performance, user behavior, and conversion rates.
-                    They analyze data to gain insights into website traffic, user engagement, and conversion funnels. Developers can also generate reports and provide clients with valuable
-                    information to make data-driven decisions for improving website performance, identifying areas for optimization, and refining marketing strategies.</p>
-                <h4>Website Analytics </h4>
-            </section>
-
-
-            
-            <section>
-                <img src="images/mobile_design.jpg" alt="mobile development picture">
-                <p> I also offer mobile app development services, creating mobile applications that complement or integrate with the website.
-                    Mobile app development involves designing and building native or hybrid apps for iOS and Android platforms.
-                    Developers use programming languages like Swift or Objective-C for iOS apps and Java or Kotlin for Android apps.
-                    Mobile app development allows businesses to extend their online presence and provide users with a seamless experience across both web and mobile platforms.</p>
-                <h4>Mobile Development </h4>
-            </section>
-            
-
-            <section>
-                <img src="images/Community.jpg" alt=" meeting picture">
-                <p>I offer consulting services to guide clients in making
-                    informed decisions about their website strategy. This may involve advising on technology selection, recommending appropriate platforms or frameworks,
-                    assisting with digital marketing strategies, conducting website audits, or providing guidance on improving website performance, security, and user experience.
-                    Website consulting helps clients align their online presence with their business goals and make strategic decisions for their website's success</p>
-                <h4>Website Consulting </h4>
-            </section>
-            
-
-        </article>
-
-        <!-- ##########################    contact page    ########################### -->
+                    <div class="section timeline_element">
+                        <div class="is-size-5 mr-5"><h3 class="has-background-warning round_background">2020</h3></div>
+                        <div class="mb-5 timeline__date"><time datetime="2023-11-25"><b>OCT, 2019 - Dec, 2020</b></time></div>
+                        <div class="has-background-primary ml-6 timeline__description">
+                            <h4 class="subtitle">Microsoft</h4>
+                            <p>I have been the software engineer at Microsoft, working on the development of Windows operating systems.I have been the data scientist at Microsoft, analyzing large datasets to improve machine learning algorithms.</p>
+                        </div>
+                    </div>
+    
+                    
+                    <div class="section timeline_element_reverse">
+                        <div class="is-size-5 mr-5"><h3 class="has-background-warning round_background">2021</h3></div>
+                        <div class="mb-5 timeline__date"><time datetime="2023-11-25"><b> Aug, 2020 - March, 2021</b></time></div>
+                        <div class="has-background-primary ml-6 timeline__description">
+                            <h4 class="subtitle">Apple</h4>
+                            <p> I have been the iOS developer at Apple, working on the development of the latest iPhone features. <br>I have been the industrial designer at Apple, responsible for designing sleek and innovative product designs</p>
+                        </div>
+                    </div>
+    
+                    <div class="section timeline_element">
+                        <div class="is-size-5 mr-5"><h3 class="has-background-warning round_background">2022</h3></div>
+                        <div class="mb-5 timeline__date"><time datetime="2023-11-25"><b>Aug, 2022 - March, 2023</b></time></div>
+                        <div class="has-background-primary ml-6 timeline__description">
+                            <h4 class="subtitle">Amazon</h4>
+                            <p>I have been the front-end developer at Amazon, working on the user interface of the e-commerce platform.
+                                I have been the supply chain manager at Amazon, optimizing the logistics and inventory management processes.</p>
+                        </div>
+                    </div>
+    
+                    
+                    <div class="section timeline_element_reverse">
+                        <div class="is-size-5 mr-5"><h3 class="has-background-warning round_background">2023</h3></div>
+                        <div class="mb-5 timeline__date"><time datetime="2023-11-25"><b>Aug, 2022 - March, 2023</b></time></div>
+                        <div class="has-background-primary ml-6 timeline__description">
+                            <h4 class="subtitle">Meta</h4>
+                            <p>I have been the product manager at Facebook, overseeing the development and launch of new features on the platform.
+                                I have been the data privacy specialist at Facebook, ensuring compliance with regulations and protecting user data.</p>
+                        </div>
+                    </div>
+    
+    
+                </section>
+    
+            </article>
 
 
 
 
-        <article id="contact">
-
-                <h4>Let's work together to build a strong online presence that engages your audience and drives results, combining your unique ideas with my technical skills and passion for creating exceptional websites</h4>
-                
-                <ul>
-                    <li><a href="https://www.tiktok.com/foryou"><i class="fa-brands fa-tiktok"  style="color: #070808;"></i></a></li>
-                    <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"  style="color: #070808;"></i></a></li>
-                    <li><a href="https://www.instagram.com/tona_accessoriess/"><i class="fa-brands fa-instagram"  style="color: #070808;"></i></a></li>
-                    <li><a href="https://github.com/MeazaTadele/UGR-6378-14/tree/main/designs"><i class="fa-brands fa-github" style="color: #070808;"></i></a></li>
-                </ul>
-
-                <a href="#contactme"><i class="fa-solid fa-circle-chevron-down"  style="color: #070808;"></i></a>
-
-
-            <section id="contactme">
-                
-                <h3>contact me </h3>
-                <address>
-                    <ul>
-                        <li><i class="fa-solid fa-phone fa-2xl"></i></li>
-                        <li><b>Address</b></li>
-                        <li>Niger road</li>
-                        <li>Addis Ababa</li>
-                        <li>Ethiopia , Africa</li>
-                        <li>postal code 6000</li>
-                    </ul>
-
-                    <ul>
-                        <li><i class="fa-solid fa-location-dot fa-2xl"></i></li>
-                        <li><b>Phone</b></li>
-                        <li>mobile 1: 090909090</li>
-                        <li>mobile 2: 093898990</li>
-                        <li>mobile 3: 093837890</li>
-                        <li>mobile 4: 090389839</li>
-                    </ul>
-
-                    <ul>
-                        <li><i class="fa-solid fa-envelope fa-2xl"></i></li>
-                        <li><b>Emails</b></li>
-                        <li><a href="mailto:meaza@gmail.com">meaza@gmail.com</a></li>
-                        <li><a href="mailto:meaztad@gmail.com">meaztad@gmail.com</a></li>
-                        <li><a href="mailto:manager@gmail.com">manager@gmail.com</a></li>
-                    </ul>
-
-                </address>
-
-            </section>
-
-        </article>
+            <article id="services" class="Services">
+                    <h2 class="title has has-text-centered" >These are the Services i provide</h2>
         
-    </body>
+                    <section class="section">
+                        <div class="columns notification has-background-primary mx-6">
+                            <div class="column is-3 is-flex is-flex-direction-column is-align-items-center is-justify-content-center" >
+                                <div class="image is-128x128">
+                                    <img class=" is-rounded" src="images/software.jpg" alt="website design" class="service__image">
+                                </div>
+                                <h5 class="has-text-weight-semibold has-text-centered mt-4">website design</h5>
+                            </div>
+                            <div class="column is-9 has-text-justified">
+                                <p class="ml-4"> Website design involves creating visually appealing and user-friendly layouts for websites. It includes designing the overall look and feel of the website, including color schemes,
+                                    typography, and graphical elements. Website designers often use tools like wireframes, mockups, and prototypes to showcase the proposed design to clients before moving into development.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    
+        
+                    <section class="section">
+                        <div class="columns notification has-background-primary mx-6">
+                            <div class="column is-3 is-flex is-flex-direction-column is-align-items-center is-justify-content-center">
+                                <div class="image is-128x128">
+                                    <img class="is-rounded" src="images/Analysis_picture.jpg" alt="website analysis" class="service__image">
+                                </div>
+                                <h5 class="has-text-weight-semibold has-text-centered mt-4">Website Analytics </h5>
+                            </div>
+                            <div class="column is-9 has-text-justified">
+                                <p class="ml-4"> I set up analytics tools like Google Analytics to track website performance, user behavior, and conversion rates.
+                                    They analyze data to gain insights into website traffic, user engagement, and conversion funnels. Developers can also generate reports and provide clients with valuable
+                                    information to make data-driven decisions for improving website performance, identifying areas for optimization, and refining marketing strategies.</p>
+                            </div>
+                        </div>
+                    </section>
+        
+                    
+                    <section class="section">
+                        <div class="columns notification has-background-primary mx-6">
+                            <div class="column is-3 is-flex is-flex-direction-column is-align-items-center is-justify-content-center">
+                                <div class="image is-128x128">
+                                    <img class="is-rounded" src="images/mobile_design.jpg" alt="mobile development picture">
+                                </div>
+                                <h5 class="has-text-weight-semibold has-text-centered mt-4">Mobile Development </h5>
+                            </div>
+                            <div class="column is-9 has-text-justified">
+                                <p class="ml-4"> I also offer mobile app development services, creating mobile applications that complement or integrate with the website.
+                                    Mobile app development involves designing and building native or hybrid apps for iOS and Android platforms.
+                                    Developers use programming languages like Swift or Objective-C for iOS apps and Java or Kotlin for Android apps.
+                                    Mobile app development allows businesses to extend their online presence and provide users with a seamless experience across both web and mobile platforms.</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+        
+                    <section class="section">
+                        <div class="columns notification has-background-primary mx-6">
+                            <div class="column is-3 is-flex is-flex-direction-column is-align-items-center is-justify-content-center">
+                                <div class="image is-128x128">
+                                    <img class="is-rounded" src="images/mobile_design.jpg" alt="mobile development picture">
+                                </div>
+                                <h5 class="has-text-weight-semibold has-text-centered mt-4">Mobile Development </h5>
+                            </div>
+                            <div class="column is-9 has-text-justified">
+                                <p class="ml-4"> I also offer mobile app development services, creating mobile applications that complement or integrate with the website.
+                                    Mobile app development involves designing and building native or hybrid apps for iOS and Android platforms.
+                                    Developers use programming languages like Swift or Objective-C for iOS apps and Java or Kotlin for Android apps.
+                                    Mobile app development allows businesses to extend their online presence and provide users with a seamless experience across both web and mobile platforms.</p>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+
+
+                <article id="contact">
+        
+                    <div class="hero has-background-primary is-flex is-flex-direction-column has-text-white">
+                        
+                        <div><h2 class="is-size-3 has-text-weight-semibold has-text-centered p-5">Let's work together to build a strong online presence that engages your audience and drives results</h2></div>
+                        <div class="hero">
+                            <ul class="is-flex is-justify-content-space-around">
+                                <li><div><a href="https://www.tiktok.com/foryou"><i class="fa-brands fa-tiktok fa-2xl"></i></a></div></li>
+                                <li><div><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a></div></li>
+                                <li><div><a href="https://www.instagram.com/tona_accessoriess/"><i class="fa-brands fa-instagram fa-2xl"></i></a></div></li>
+                                <li><div><a href="https://github.com/MeazaTadele/UGR-6378-14/tree/main/designs"><i class="fa-brands fa-github fa-2xl"></i></a></div></li>
+                            </ul>
+                        </div>
+                        <div class="has-text-centered m-6 is-size-3"><a href="#contactme"><i class="fa-solid fa-circle-chevron-down"  style="color: #e1a66f;"></i></a></div>
+        
+                    </div>
+                    
+        
+                    <section id="contactme" class="section mt-6">
+                        
+                        <h3 class="is-size-4 has-text-weight-bold has-text-centered mb-5">Get In Touch </h3>
+                        <address class="columns has-background-primary has-text-centered p-6 ">
+                            <ul class="column is-4 is-flex is-flex-direction-column is-align-items-center">
+                                <li class=" p-5"><div class="round_background has-background-warning"><i class="fa-solid fa-phone fa-2xl"></i></div></li>
+                                <li><b>Address</b></li>
+                                <li>Niger road</li>
+                                <li>Addis Ababa</li>
+                                <li>Ethiopia, Africa</li>
+                                <li>postal code 6000</li>
+                            </ul>
+        
+                            <ul class="column is-4 is-flex is-flex-direction-column is-align-items-center">
+                                <li class="p-5 "><div class="round_background has-background-warning"><i class="fa-solid fa-location-dot fa-2xl"></i></div></li>
+                                <li><b>Phone</b></li>
+                                <li>mobile 1: 090909090</li>
+                                <li>mobile 2: 093898990</li>
+                                <li>mobile 3: 093837890</li>
+                                <li>mobile 4: 090389839</li>
+                            </ul>
+        
+                            <ul class="column is-4 is-flex is-flex-direction-column is-align-items-center">
+                                <li class="p-5"><div class="round_background has-background-warning"><i class="fa-solid fa-envelope fa-2xl"></i></div></li>
+                                <li><b>Emails</b></li>
+                                <li><a href="mailto:meaza@gmail.com">meaza@gmail.com</a></li>
+                                <li><a href="mailto:meaztad@gmail.com">meaztad@gmail.com</a></li>
+                                <li><a href="mailto:manager@gmail.com">manager@gmail.com</a></li>
+                            </ul>
+        
+                        </address>
+                    </section>
+                </article>
+
+                <footer class="footer has-background-dark has-text-white py-2 my-2">
+                    <p>&copy; 2023 Meaza Tadele. All rights reserved.</p>
+                </footer>
+
+                <script src="js/js.js"></script>
+
+            </main>
+
+        </div>
+</body>
 
 </html>
+
+
+        
